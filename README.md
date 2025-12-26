@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+# Chat App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple chat UI built with React and Tailwind CSS. This repository contains the frontend source under the `chat-app` folder and some shared types in `types/`.
 
-## Available Scripts
+**Features**
+- Real-time chat UI (front-end only)
+- Responsive layout using Tailwind CSS
+- Componentized UI: chat list and chat window
 
-In the project directory, you can run:
+**Tech stack**
+- React (Create React App)
+- Tailwind CSS + PostCSS
 
-### `npm start`
+## Getting started
+1. Open a terminal and navigate to the project root.
+2. Change into the frontend folder and install dependencies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+```bash
+cd chat-app
+npm install
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Start the development server:
 
-### `npm test`
+```bash
+npm start
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The app will be available at http://localhost:3000.
 
-### `npm run build`
+## Available scripts
+- Start dev server: `npm start` (run from `chat-app`)
+- Run tests: `npm test`
+- Build production bundle: `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+See the project's package manifest: [chat-app/package.json](chat-app/package.json)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Project structure (key files)
+- `chat-app/public` — static HTML and manifest
+- `chat-app/src` — React source
+	- [chat-app/src/App.js](chat-app/src/App.js)
+	- [chat-app/src/index.js](chat-app/src/index.js)
+	- [chat-app/src/App.css](chat-app/src/App.css)
+	- [chat-app/src/components/ChatList.js](chat-app/src/components/ChatList.js)
+	- [chat-app/src/components/ChatWindow.js](chat-app/src/components/ChatWindow.js)
+- [tailwind.config.js](tailwind.config.js)
+- [postcss.config.js](postcss.config.js)
+- [types/chat.ts](types/chat.ts)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Development notes
+- Tailwind is configured in `tailwind.config.js` and wired via PostCSS. If styles don't appear, rebuild the dev server after changing config.
+- The app is intentionally front-end only; integrate a backend (WebSocket/REST) to add persistence and real-time messaging.
 
-### `npm run eject`
+## Contributing
+Feel free to open issues or PRs. For large changes, open an issue first to discuss the approach.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+This project currently has no license specified. Add a `LICENSE` file if you want to make the project open source.
